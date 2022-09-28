@@ -29,13 +29,41 @@ function requestOfServer() {
 
 
 function submitDataOfUser(){
-    const nameOfUser = $('#nome').val();
-    const lastNameOfUser = $('#sobrenome').val();
-    const ageOfUser = $('#idade').val();
+    const nameOfUser = $('#name').val();
+    const lastNameOfUser = $('#lastname').val();
+    const ageOfUser = $('#age').val();
+    
+    $.ajax({
+        "url": "http://localhost:8000/insert-data",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          name: nameOfUser,
+          lastName: lastNameOfUser,
+          age: ageOfUser
+        })
+    }).done(function (response) {       
+        if(response.sucess){
+            //alert("Deu certo");
+            $("#sucesso-msg").css('display', 'flex');
 
-
-    console.log(nameOfUser);
-    console.log(lastNameOfUser);
-    console.log(ageOfUser);
+            $("#name").val('');
+            $("#lastname").val('');
+            $("#age").val('');
+        }else{
+            alert("Deu erro");
+        }
+    });
 }
+
+
+function closeSuccessMsg(){
+    $(".sucesso").css('display', 'none');
+}
+
+
+
 
