@@ -1,54 +1,74 @@
 #show-values{
-    display:none;
+    display: none;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
-    height: 600px;
-}
-
-body>main>article {
-    text-align: center;
-}
-
 header {
     text-align: center;
 }
 
-footer {
-    color: #fff;
-    background: #000;
-    height: 350px;
-    text-align: center;
-}
-
-footer>span {
-    position: relative;
-    top: 30px;
-    font-weight: 700;
-}
-
 form {
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    text-align: center;
-    margin-top: 30px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 500px; 
+    text-align: center; 
+    margin-top: 30px; 
     border: 1px solid;
     border-radius: 15px;
     padding-top: 15px;
 }
 
-#sucesso-msg{display:none;}
-.sucesso{border:solid 1px;padding:10px;text-align:center;margin:0 auto;width:310px;background: #25df25;color:#fff;border-radius:15px;display:flex;align-items:center;justify-content:space-between;}
-.sucesso svg{cursor:pointer;}
+main {
+    height: 600px;
+}
 
 
+body > main > article {
+    text-align: center;
+}
 
+footer {
+        color: #fff;
+        background-color: #000;
+        height: 350px;
+        text-align: center;
+}
 
+footer > span {
+    position: relative;
+    top: 30px;
+    font-weight: 700;
+} 
 
+.sucess-record{
+    
+    padding-top: 5px;
+    text-align: center;
+    color: #fff;
+    width: 350px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 15px;
+    background-color: #000;
+}
+
+.sucess-record > div {
+    display: inline-block;
+}
+
+.sucess-record > div > svg {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+   
+}
+
+#sucess-record-msg{
+    display:none;
+}
 
 
